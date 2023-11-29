@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:animate_do_app/pages/twiter_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -13,7 +14,9 @@ class Page1 extends StatelessWidget {
         title: FadeIn(child: const Text('Animate_do')),
         actions: [
           IconButton(
-            onPressed: () {}, 
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const TwitterPage()));
+            }, 
             icon: const FaIcon(FontAwesomeIcons.twitter)
           ),
           IconButton(
